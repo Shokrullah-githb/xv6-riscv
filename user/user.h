@@ -1,6 +1,7 @@
 #define SBRK_ERROR ((char *)-1)
 
 struct stat;
+#include "pinfo.h"
 
 // system calls
 int fork(void);
@@ -24,6 +25,8 @@ int getpid(void);
 char *sys_sbrk(int, int);
 int pause(int);
 int uptime(void);
+int sleep(int);
+int getprocs(struct pinfo *, int);
 int sync(void);
 
 // ulib.c
